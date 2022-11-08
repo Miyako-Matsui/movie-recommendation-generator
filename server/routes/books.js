@@ -4,9 +4,9 @@ const router = express.Router()
 const db = require('../db/db')
 
 router.get('/', (req, res) => {
-  db.getWidgets()
-    .then((widgets) => {
-      res.json(widgets)
+  db.getBooks()
+    .then((books) => {
+      res.json(books)
     })
     .catch((err) => {
       res.status(500).send(err.message)

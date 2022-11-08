@@ -1,9 +1,12 @@
 import React from 'react'
 
+import Books from './Books'
+
 function App() {
   return (
     <div>
-      <h1>Widgets for the win!</h1>
+      <h1>Welcome!</h1>
+      <Books />
     </div>
   )
 }
