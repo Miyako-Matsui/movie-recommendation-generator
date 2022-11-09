@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Books from './Books'
+import Movies from './Movies'
 
 function App() {
   return (
     <div>
       <h1>Welcome!</h1>
-      <Books />
+      <Movies />
     </div>
   )
 }
