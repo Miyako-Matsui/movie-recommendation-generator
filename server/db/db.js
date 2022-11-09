@@ -3,14 +3,14 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getBooks,
   getmovies,
-}
-
-function getBooks(db = connection) {
-  return db('books').select()
+  addMovie,
 }
 
 function getmovies(db = connection) {
   return db('movies').select()
+}
+
+function addMovie(newMovie, db = connection) {
+  return db('movies').insert(newMovie)
 }

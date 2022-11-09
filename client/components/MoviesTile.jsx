@@ -1,7 +1,7 @@
 import React from 'react'
 
 function MovieTile({ movieProp }) {
-  console.log(movieProp)
+  // console.log(movieProp)
   return (
     <>
       <div className="book_tile">
