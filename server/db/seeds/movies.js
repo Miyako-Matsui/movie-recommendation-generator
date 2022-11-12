@@ -3,12 +3,24 @@ exports.seed = async function (knex) {
   await knex('movies').insert([
     {
       id: 1,
-      title: 'Star Wars: Return of the Jedi',
+      title: 'Star Wars:The Phantom Menace',
       director: 'George Lucas',
       genre: 'Sci-fi',
       rating: 10,
     },
-    { id: 2, title: 'Ponpoko', director: 'Hayao', genre: 'Anime', rating: 10 },
-    { id: 3, title: 'Star Trek', director: 'Matt', genre: 'Sci-fi', rating: 5 },
+    {
+      id: 2,
+      title: 'Ponpoko',
+      director: 'Hayao Miyazaki',
+      genre: 'Anime',
+      rating: 10,
+    },
+    {
+      id: 3,
+      title: 'Welcome Back, Mr. McDonald',
+      director: 'Koki Mitani',
+      genre: 'Comedy',
+      rating: 10,
+    },
   ])
 }
