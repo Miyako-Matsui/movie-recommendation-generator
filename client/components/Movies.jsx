@@ -24,11 +24,8 @@ function Movies() {
 
   return (
     <>
-      <h1>Take me to the Movie!</h1>
       <button onClick={refreshMovies}>Random Movie</button>
       <div>
-        {/* <p>{console.log(movies)}</p> */}
-
         {movies.map((movie) => (
           <MovieTile key={movie.id} movieProp={movie} />
         ))}

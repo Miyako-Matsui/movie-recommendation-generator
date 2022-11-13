@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import Botton from './Botton'
 
 import { getRecommendations } from '../api/movies'
+// import Select from './Select'
 
 function Recommendations() {
-  getRecommendations()
   const [recArry, setRecArry] = useState([])
+  const [genre, setGenre] = useState()
+  const [origin, setOrigin] = useState()
 
   useEffect(() => {
     getRecommendations()
@@ -13,16 +16,23 @@ function Recommendations() {
       })
       .catch((err) => err.message)
   }, [])
-  console.log('hi', recArry)
+
+  const genreHandler = (evt) => {
+    setGenre(evt.target.value)
+  }
+
+  const originHandler = (evt) => {
+    setOrigin(evt.target.value)
+  }
 
   return (
-    <form>
+    <form onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="title">Genre</label>
       <p>
-        <select id="title" name="title">
+        <select id="title" name="title" value={genre} onChange={genreHandler}>
           <option> Select your favorite </option>
           {recArry.map((rec) => (
-            <option value={rec.id} key={rec.id}>
+            <option value={rec.genre} key={rec.id}>
               {rec.genre}
             </option>
           ))}
@@ -31,10 +41,15 @@ function Recommendations() {
 
       <label htmlFor="origin">Origin</label>
       <p>
-        <select id="origin" name="origin">
+        <select
+          id="origin"
+          name="origin"
+          value={origin}
+          onChange={originHandler}
+        >
           <option> Select your favorite </option>
           {recArry.map((rec) => (
-            <option value={rec.id} key={rec.id}>
+            <option value={rec.origin} key={rec.id}>
               {rec.origin}
             </option>
           ))}
@@ -42,7 +57,7 @@ function Recommendations() {
       </p>
 
       <br />
-      <button>Reccomendation!</button>
+      <Botton genreProp={genre} originProp={origin} />
     </form>
   )
 }
