@@ -20,3 +20,7 @@ body {
 .book_tile img {
   max-width: 100px;
 }
+
+.ul {
+  list-style: none;
+}

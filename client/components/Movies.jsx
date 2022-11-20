@@ -24,7 +24,9 @@ function Movies() {
 
   return (
     <>
-      <button onClick={refreshMovies}>Random Movie</button>
+      <button onClick={refreshMovies} className="book_tile">
+        Random Movie
+      </button>
       <div>
         {movies.map((movie) => (
           <MovieTile key={movie.id} movieProp={movie} />

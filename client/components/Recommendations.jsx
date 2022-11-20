@@ -26,7 +26,7 @@ function Recommendations() {
   }
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={(e) => e.preventDefault()} className="book_tile">
       <label htmlFor="title">Genre</label>
       <p>
         <select id="title" name="title" value={genre} onChange={genreHandler}>
