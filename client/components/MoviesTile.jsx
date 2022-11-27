@@ -1,5 +1,5 @@
 import React from 'react'
-
+//youtube Hihi 2022 - W5D2 - API react chats
 function MovieTile({ movieProp }) {
   // console.log('movieProp', movieProp) 結果ランダム映画
   return (
