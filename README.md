@@ -2,7 +2,6 @@
 
 ## Installation and migrations
 
-- [ ] Clone this repo and `cd` into the new directory
 - [ ] Install packages, run migrations and seeds, and start the dev server with `npm run dev`
   <details style="padding-left: 2em">
     <summary>Tip</summary>
