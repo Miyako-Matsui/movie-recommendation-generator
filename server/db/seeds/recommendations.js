@@ -3,7 +3,7 @@ exports.seed = async function (knex) {
   await knex('reccomendations').insert([
     {
       id: 1,
-      title: 'Sprite away',
+      title: 'Splite away',
       director: 'Hayao Miyazaki',
       genre: 'Anime',
       origin: 'Japan',
