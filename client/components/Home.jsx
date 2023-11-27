@@ -12,7 +12,7 @@ function Home() {
         alt="line"
       ></img>
       <h1>Welcome!</h1>
-      <h2>💖 Take me to the Movie! 💖</h2>
+      <h2>💖 Take me to the Movie! hehe 💖</h2>
       <Movies />
       <br />
       <Recommendations />
